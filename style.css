@@ -1,0 +1,606 @@
+body {
+  padding-top: 67px; /* Adjust height depending on navbar height */
+  background-color: #070707 !important;
+  margin: 0; /* remove browser default spacing */
+  /* font-family: "Poppins", sans-serif; modern readable font */
+  color: #ffffff; /* default text color */
+  line-height: 1.6; /* comfortable text spacing */
+  scroll-behavior: smooth; /* smooth scroll to anchor links */
+  overflow-x: hidden !important; /* prevent horizontal scroll */
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+}
+
+/*------------------------------------------------ -NAVBAR -----------------------------------------------------------*/
+
+nav.navbar {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* keep it above other content */
+}
+
+#imglogo {
+  width: 40px;
+  height: auto;
+}
+
+#imgname {
+  height: 30px;
+}
+
+.navbar .nav-link:hover {
+  color: #0dcaf0 !important;
+  border: 1px solid rgba(255, 255, 255, 0.248);
+  padding: 3px;
+  text-decoration: none;
+  border-radius: 5px;
+  border-bottom: 2px solid #0077e6;
+}
+
+/*------------------------------------------------- WELCOME BOX -----------------------------------------------------------*/
+
+#welcome {
+  position: relative;
+  z-index: -10;
+  box-sizing: border-box;
+  width: 100%;
+  height: 450px;
+  background-image: url("/assets/opnlap.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* start hidden and animate */
+  opacity: 0;
+  animation: fadeInBg 3s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInBg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+
+#wel h2 {
+  color: #ffffff;
+  font-family: "Playwrite DE SAS", cursive;
+  font-weight: 500;
+  font-style: normal;
+  margin-top: -360px;
+}
+
+#wel button {
+  position: absolute;
+  top: 80px;
+  right: 15px;
+  position: fixed;
+  z-index: 999;
+  transition: all 0.4s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+#wel button:hover {
+  transform: scale(1.1);
+  background-color: black;
+  background: linear-gradient(45deg, #7f00ff, #00ffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(0, 183, 255, 0.516);
+}
+
+#wel p {
+  color: #ffffff;
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+}
+
+/*------------------------------------------------- INFO BOX -----------------------------------------------------------*/
+
+#info {
+  margin-top: 70px;
+
+  width: 100%;
+  height: auto;
+  /* border: 2px solid green; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#img-div {
+  height: 220px;
+  width: auto;
+  border: 3px solid rgb(255, 255, 255);
+  border-top-left-radius: 25px;
+}
+
+#img-div img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 20px;
+  box-shadow: 0 1px 70px rgba(0, 238, 255, 0.267);
+  object-fit: contain;
+}
+
+#info-div {
+  height: 220px;
+  width: 450px;
+  margin-left: 10px;
+  /* border: 2px solid rgb(0, 0, 0); */
+  background-color: rgba(255, 255, 255, 0.927);
+  border-bottom-right-radius: 25px;
+  padding-left: 7px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  box-shadow: 0 1px 70px -10px rgba(0, 238, 255, 0.267);
+}
+
+.icon {
+  display: inline-block;
+  padding-left: 8px;
+  transition: all 0.4s ease;
+}
+
+.icon:hover {
+  transform: scale(1.4);
+  background: linear-gradient(45deg, #7f00ff, #00ffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(0, 183, 255, 0.516);
+}
+
+h1 {
+  color: rgb(38, 36, 36);
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+}
+
+#role {
+  background: linear-gradient(45deg, #6a5acd, #00bfff); /* purple to blue */
+  -webkit-background-clip: text; /* clip gradient to text */
+  -webkit-text-fill-color: transparent; /* make text transparent to show gradient */
+}
+
+#rolee {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  #info {
+    flex-direction: column; /* This stacks them vertically */
+    /* ... */
+  }
+
+  #info-div {
+    margin-top: 10px;
+    margin-left: 0px;
+    border-top-left-radius: 25px;
+    width: 90%; /* 90% of parent container */
+  }
+
+  #img-div {
+    width: 50%;
+    height: auto;
+    border-radius: 0;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
+/*------------------------------------------------- EDUCATION -----------------------------------------------------------*/
+
+.edu-section {
+  padding: 60px 20px;
+}
+
+.edu-card {
+  background: #fff;
+  border: none;
+  border-left: 5px solid #0d6efd;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.edu-icon {
+  font-size: 2.5rem;
+  color: #0d6efd;
+  margin-right: 15px;
+}
+
+.edu-year {
+  color: #6c757d;
+  font-size: 0.95rem;
+}
+
+h2.section-title {
+  font-weight: 700;
+  color: #0d6efd;
+  margin-bottom: 40px;
+}
+
+.college-name {
+  color: #212529;
+  font-weight: 600;
+}
+
+.degree-title {
+  color: #0d6efd;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+#education,
+#certification {
+  width: 90%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 20px 0px 20px 20px;
+  /* border: 2px solid green; */
+  margin: 30px auto 10px auto;
+  box-shadow: 0 0px 60px rgba(0, 238, 255, 0.112);
+
+  border-radius: 20px;
+  background-color: #000209;
+}
+
+.gradient-icon {
+  background: linear-gradient(45deg, #7f00ff, #00ffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem; /* adjust as needed */
+}
+
+#education h5 {
+  color: #a0b9c6;
+  font-family: "Poppins", sans-serif;
+}
+
+#education h6 {
+  color: #a0b9c65c;
+  font-family: "Poppins", sans-serif;
+}
+#education p {
+  color: #2b3338da;
+  font-family: "Poppins", sans-serif;
+}
+
+#education h2,
+#certification h2,
+#skill h2,
+#project h2,
+#footer h2 {
+  color: whitesmoke;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  display: inline-block;
+}
+
+#education h2::after,
+#certification h2::after,
+#skill h2::after,
+#project h2::after,
+#footer h2::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(45deg, #7f00ff, #00ffff);
+  transition: width 0.4s ease;
+  border-radius: 5px;
+}
+
+/* Hover effect for all sections */
+#education:hover h2::after,
+#certification:hover h2::after,
+#skill:hover h2::after,
+#project:hover h2::after,
+#footer h2::after {
+  width: 100%;
+}
+
+#education:hover {
+  transform: scale(1.02);
+  transition: all 0.4s ease;
+  border: 1px solid #24cfed58;
+}
+
+#certification:hover {
+  box-shadow: 0 0px 60px rgba(0, 238, 255, 0.112);
+  transform: scale(1.02);
+  transition: all 0.4s ease;
+  border: 1px solid #24cfed58;
+}
+
+/*------------------------------------------------- CERTIFICATION -----------------------------------------------------------*/
+
+#certifications {
+  background-color: #000;
+  min-height: 70vh;
+}
+
+.gradient-icon {
+  background: linear-gradient(45deg, #7f00ff, #00ffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cert-tile {
+  position: relative;
+  margin-top: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 40px 20px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  transition: all 0.4s ease;
+  overflow: hidden;
+  height: 250px;
+}
+
+.cert-tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(45deg, #7f00ff, #00ffff);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  transition: 0.4s;
+  opacity: 0;
+}
+
+.cert-tile:hover::before {
+  opacity: 1;
+}
+
+.icon-box {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 15px auto;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #7f00ff, #00ffff);
+  color: #000;
+  font-size: 2.5rem;
+  box-shadow: 0 0 20px rgba(127, 0, 255, 0.5);
+  transition: all 0.4s ease;
+}
+
+.cert-tile:hover .icon-box {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 0 35px rgba(127, 0, 255, 0.8);
+}
+
+.cert-content h5 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.cert-content p {
+  font-size: 0.95rem;
+  color: #00ffff;
+}
+/*------------------------------------------------- Skill -----------------------------------------------------------*/
+
+#skill {
+  width: 90%;
+  height: auto;
+  margin: 30px auto 10px auto;
+  /* border: 1px solid #24cfed58; */
+  box-shadow: 0 0px 60px rgba(0, 238, 255, 0.112);
+  border-radius: 20px;
+  background-color: #000209ad;
+  padding: 20px;
+}
+.gradient-icon {
+  background: linear-gradient(45deg, #7f00ff, #00ffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#skill:hover {
+  box-shadow: 0 0px 60px rgba(0, 238, 255, 0.112);
+  transform: scale(1.02);
+  transition: all 0.4s ease;
+  border: 1px solid #24cfed58;
+}
+
+#skills {
+  background-color: #000;
+  color: white;
+}
+
+.skill-box {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(127, 0, 255, 0.1);
+}
+
+.skill-box:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(45deg, #7f00ff, #00ffff);
+  color: #000;
+  box-shadow: 0 0 25px rgba(127, 0, 255, 0.6);
+}
+
+.sinfo:hover {
+  transform: scale(1.02);
+  transition: all 0.4s ease;
+}
+
+.skill-icon {
+  font-size: 3.5rem;
+  padding-right: 10px;
+  background: linear-gradient(45deg, #7f00ff, #00ffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.4s;
+}
+
+.skill-box:hover .skill-icon {
+  color: #000;
+  -webkit-text-fill-color: #000;
+}
+
+.tag {
+  border: 1px solid rgba(0, 255, 255, 0.6);
+  color: #00ffff;
+  padding: 8px 16px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.tag:hover {
+  background: linear-gradient(45deg, #7f00ff, #00ffff);
+  color: #000;
+  border: none;
+  box-shadow: 0 0 15px rgba(127, 0, 255, 0.6);
+}
+
+/*------------------------------------------------ PROJECt -----------------------------------------------------------*/
+
+#project {
+  width: 90%;
+  height: auto;
+  margin: 30px auto 10px auto;
+  border-radius: 20px;
+  background-color: #000209ad;
+  box-shadow: 0 0px 60px rgba(0, 238, 255, 0.112);
+  padding: 20px;
+}
+
+.btn-prg {
+  margin-top: 30px;
+  width: 100%;
+  position: relative;
+  background: linear-gradient(135deg, #7c5cff, #00e6ff);
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 18px 60px;
+  border-radius: 12px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(124, 92, 255, 0.4), 0 0 40px rgba(0, 230, 255, 0.3);
+  z-index: 1;
+  overflow: hidden;
+}
+
+#project:hover {
+  box-shadow: 0 0px 60px rgba(0, 238, 255, 0.112);
+  transform: scale(1.02);
+  transition: all 0.4s ease;
+  border: 1px solid #24cfed58;
+}
+
+.card {
+  width: 400px; /* wider card */
+  height: 600px; /* taller card */
+  background-color: #000209ad !important;
+
+  border-radius: 10px !important;
+  overflow: hidden; /* ensures image doesn't spill out */
+  display: flex;
+  flex-direction: column;
+}
+
+.p-img {
+  border: 1px solid #1d6c99;
+}
+
+.p-img:hover {
+  transform: scale(1.05) !important;
+
+  border: 2px solid #1d6c99;
+  transition: all 0.4s ease;
+}
+
+.card-body h3:hover {
+  background: linear-gradient(45deg, #6a5acd, #00bfff); /* purple to blue */
+  -webkit-background-clip: text; /* clip gradient to text */
+  -webkit-text-fill-color: transparent; /* show gradient inside text */
+}
+
+.card-body {
+  flex: 1; /* takes remaining vertical space */
+  padding: 15px;
+}
+
+/* ----------------------CONTACT ME--------------------------------------- */
+
+#footer {
+  width: 90%;
+  height: auto;
+  margin: 60px auto 10px auto;
+
+  box-shadow: 0 0px 60px rgba(0, 238, 255, 0.112);
+  border-radius: 20px;
+  background-color: #000209ad;
+  padding: 20px;
+
+  .icon-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ffffff; /* Circle background */
+    color: #000000; /* Icon color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px; /* Icon size */
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); Soft shadow */
+    margin: 0 auto; /* Center horizontally */
+  }
+}
+
+#footer:hover {
+  transform: scale(1.02);
+  transition: all 0.4s ease;
+  border: 1px solid #24cfed58;
+}
+
+#foot-opt {
+  margin-top: 100px;
+}
+
+.copyright {
+  margin-top: 70px;
+  padding-bottom: 70px;
+  color: #a0b9c6;
+}
