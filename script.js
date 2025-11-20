@@ -51,7 +51,7 @@ function prg_change1() {
 `;
 
   h33.innerText = "1.CalcXpert";
-  imgg.src = "/assets/Screenshot 2025-11-10 215944.png";
+  imgg.src = "assets/Screenshot 2025-11-10 215944.png";
 }
 
 function prg_change2() {
@@ -74,7 +74,7 @@ function prg_change2() {
 
   h33.innerText = "2.Haven&Hue";
 
-  imgg.src = "/assets/Screenshot 2025-10-26 124730.png";
+  imgg.src = "assets/Screenshot 2025-10-26 124730.png";
 }
 
 function prg_change3() {
@@ -97,5 +97,5 @@ function prg_change3() {
 
   h33.innerText = "3.Personal Portfolio Website";
 
-  imgg.src = "/assets/Screenshot 2025-10-26 124142.png";
+  imgg.src = "assets/Screenshot 2025-10-26 124142.png";
 }
