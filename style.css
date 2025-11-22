@@ -2,9 +2,8 @@ body {
   padding-top: 67px; /* Adjust height depending on navbar height */
   background-color: #070707 !important;
   margin: 0; /* remove browser default spacing */
-  /* font-family: "Poppins", sans-serif; modern readable font */
-  color: #ffffff; /* default text color */
-  line-height: 1.6; /* comfortable text spacing */
+  color: #ffffff; 
+  line-height: 1.6; 
   scroll-behavior: smooth; /* smooth scroll to anchor links */
   overflow-x: hidden !important; /* prevent horizontal scroll */
 }
